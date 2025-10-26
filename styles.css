@@ -145,14 +145,26 @@
     padding-bottom: var(--spacing-xs);
 }
 
-.heading-primary::after {
+.heading-secondary {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    margin-top: -60px;
+    font-size: 1.6em;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.2px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.heading-secondary::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 2px;
+    width: 60px;
+    height: 1px;
     background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
     border-radius: 1px;
 }
@@ -211,4 +223,79 @@
 
 .link-primary:hover::before {
     width: 100%;
+}
+
+/* ==========================================================================
+   Mobile Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    .heading-primary {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    
+    .heading-secondary {
+        font-size: 1.3em;
+        margin-top: -40px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .text-body {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        padding-left: 0;
+        text-align: left;
+    }
+    
+    .text-body:hover {
+        padding: 15px;
+        transform: none;
+    }
+    
+    .link-primary {
+        padding: 4px 6px;
+        font-size: 0.95em;
+    }
+    
+    .link-primary:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: 20px 15px;
+    }
+    
+    .heading-primary {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+    
+    .heading-secondary {
+        font-size: 1.2em;
+        margin-top: -35px;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .text-body {
+        font-size: 0.95em;
+        margin-bottom: 18px;
+    }
+    
+    .heading-primary::after {
+        width: 60px;
+    }
+    
+    .heading-secondary::after {
+        width: 40px;
+    }
 }
