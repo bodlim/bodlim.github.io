@@ -147,14 +147,15 @@
 
 .heading-secondary {
     color: var(--color-primary);
-    margin-bottom: 20px;
-    margin-top: -60px;
+    margin: -60px auto 20px auto;
     font-size: 1.6em;
     font-weight: var(--font-weight-medium);
     letter-spacing: -0.2px;
     text-align: center;
     position: relative;
     padding-bottom: 20px;
+    display: block;
+    width: 100%;
 }
 
 .heading-secondary::after {
